@@ -12,7 +12,7 @@ Mở Terminal tại thư mục project và chạy:
 ```bash
 pip install -r requirements.txt
 ```
-*(File `requirements.txt` đã loại bỏ `openai` và thay bằng thư viện `ollama` đúng chuẩn Proposal).*
+
 
 ---
 

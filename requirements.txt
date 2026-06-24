@@ -1,8 +1,8 @@
-# LLM API & Data Processing
+# LLM API (Ollama Local API) & Data Processing
+ollama==0.2.1
 pandas==2.2.2
 numpy==1.26.4
 requests==2.32.3
-openai==1.35.3
 tqdm==4.66.4
 
 # Statistics & Data Analysis

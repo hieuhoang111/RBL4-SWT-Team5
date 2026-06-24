@@ -15,8 +15,8 @@ Tài liệu này quy định rõ trách nhiệm (Ownership) của từng thành 
 ## 🗂️ Thư mục `data/` (Data & Ground Truth - DG)
 **Phụ trách 100%: Huỳnh Tấn Phát**
 Khu vực chứa dữ liệu đầu vào và đáp án chuẩn. Mọi sai sót về data ở khâu này sẽ làm hỏng toàn bộ dự án.
-*   `data/raw/` *(Tuần 6)*: Thư mục chứa dataset gốc Defects4J. Tuyệt đối KHÔNG sửa đổi file gốc.
-*   `data/raw/README.md` *(Tuần 6)*: Ghi rõ nguồn, license, cấu trúc cột, ngày tải dataset.
+*   `data/raw/` : Thư mục chứa dataset gốc Defects4J. Tuyệt đối KHÔNG sửa đổi file gốc.
+*   `data/raw/README.md` : Ghi rõ nguồn, license, cấu trúc cột, ngày tải dataset.
 *   `data/pilot_sample.csv` *(Tuần 7)*: File chứa 10-20% N (dữ liệu ngẫu nhiên) để chạy thử. (Nhớ báo Hiếu ghi Random Seed vào notes.md).
 *   `data/pilot_ground_truth.csv` *(Tuần 7)*: File đáp án chuẩn của nhóm trên tập chạy thử + điểm IAA.
 *   `data/full_ground_truth.csv` *(Tuần 8)*: File đáp án chuẩn của toàn bộ dữ liệu + điểm IAA.
@@ -26,10 +26,10 @@ Khu vực chứa dữ liệu đầu vào và đáp án chuẩn. Mọi sai sót v
 ## 💻 Thư mục `scripts/` (Code thực thi)
 **Phụ trách: Nguyễn Trần Ngọc Thiện (LR) & Huỳnh Quốc Bình (MS)**
 Khu vực chứa các kịch bản chạy tự động. Thiện lo phần gọi AI, Bình lo phần chấm điểm.
-*   `scripts/test_api.py` *(Tuần 6)* 👉 **Ngọc Thiện (LR)**: Code test 1 câu hỏi gọi API (Pass Gate E3).
-*   `scripts/run_experiment.py` *(Tuần 6)* 👉 **Ngọc Thiện (LR)**: Code chạy LLM hàng loạt. **Yêu cầu bắt buộc:** Phải có cơ chế Retry (chống Rate Limit) và lưu Checkpoint mỗi 50 dòng.
-*   `scripts/setup_kaggle_colab.sh` *(Tuần 6)* 👉 **Ngọc Thiện (LR)**: Script cài đặt Ollama trên Colab/Kaggle.
-*   `scripts/compute_metric.py` *(Tuần 6)* 👉 **Quốc Bình (MS)**: Code tính Metric và chạy kiểm định thống kê (Pass Gate E4).
+*   `scripts/test_api.py` ** 👉 **Ngọc Thiện (LR)**: Code test 1 câu hỏi gọi API (Pass Gate E3).
+*   `scripts/run_experiment.py` 👉 **Ngọc Thiện (LR)**: Code chạy LLM hàng loạt. **Yêu cầu bắt buộc:** Phải có cơ chế Retry (chống Rate Limit) và lưu Checkpoint mỗi 50 dòng.
+*   `scripts/setup_kaggle_colab.sh`  👉 **Ngọc Thiện (LR)**: Script cài đặt Ollama trên Colab/Kaggle.
+*   `scripts/compute_metric.py` 👉 **Quốc Bình (MS)**: Code tính Metric và chạy kiểm định thống kê (Pass Gate E4).
 
 ---
 
@@ -37,22 +37,22 @@ Khu vực chứa các kịch bản chạy tự động. Thiện lo phần gọi 
 **Phụ trách: Nguyễn Trần Ngọc Thiện (LR) & Huỳnh Quốc Bình (MS)**
 Khu vực lưu trữ kết quả chạy script.
 *   **Sản phẩm của Ngọc Thiện (LR):**
-    *   `results/pilot_llm_output.csv` *(Tuần 7)*: Output LLM trên tập pilot.
-    *   `results/pilot_api_log.txt` *(Tuần 7)*: Nhật ký gọi API (timestamp, response model, cost/call).
-    *   `results/full_llm_output.csv` *(Tuần 8)*: Output LLM toàn bộ dataset.
-    *   `results/full_api_log.txt` *(Tuần 8)*: Nhật ký chạy bản Full (cost, errors).
+    *   `results/pilot_llm_output.csv` : Output LLM trên tập pilot.
+    *   `results/pilot_api_log.txt` : Nhật ký gọi API (timestamp, response model, cost/call).
+    *   `results/full_llm_output.csv` *: Output LLM toàn bộ dataset.
+    *   `results/full_api_log.txt` : Nhật ký chạy bản Full (cost, errors).
 *   **Sản phẩm của Quốc Bình (MS):**
-    *   `results/pilot_analysis.ipynb` *(Tuần 7)*: Phân tích mẻ pilot (Histogram + descriptive stats). Báo cáo Hiếu xác nhận lại Test choice.
-    *   `results/full_analysis.ipynb` *(Tuần 8)*: Chấm điểm bản full. Tính p-value, effect size, kết luận per RQ. **Yêu cầu:** File phải chạy mượt từ đầu đến cuối (Restart & Run All).
-    *   `results/summary.csv` *(Tuần 8)*: Bảng chốt hạ (1 dòng/RQ: metric, p, effect size, N).
+    *   `results/pilot_analysis.ipynb` : Phân tích mẻ pilot (Histogram + descriptive stats). Báo cáo Hiếu xác nhận lại Test choice.
+    *   `results/full_analysis.ipynb` : Chấm điểm bản full. Tính p-value, effect size, kết luận per RQ. **Yêu cầu:** File phải chạy mượt từ đầu đến cuối (Restart & Run All).
+    *   `results/summary.csv` : Bảng chốt hạ (1 dòng/RQ: metric, p, effect size, N).
 
 ---
 
 ## 🎨 Thư mục `figures/` (Trực quan hóa dữ liệu)
 **Phụ trách 100%: Võ Minh Trí (RW)**
 Lấy số liệu từ các file `results/*.csv` do Bình tạo ra để vẽ biểu đồ chèn vào báo cáo.
-*   `figures/fig1_distribution.png` *(Tuần 8)*: Biểu đồ phân phối (Boxplot/violin) cho metric chính. Đảm bảo chất lượng sắc nét ≥ 300 DPI.
-*   `figures/fig2_comparison.png` *(Tuần 8)*: Biểu đồ so sánh (Comparative plot - dùng cho RQ2).
+*   `figures/fig1_distribution.png` : Biểu đồ phân phối (Boxplot/violin) cho metric chính. Đảm bảo chất lượng sắc nét ≥ 300 DPI.
+*   `figures/fig2_comparison.png` : Biểu đồ so sánh (Comparative plot - dùng cho RQ2).
 
 ---
 **💡 Checklist khi push code (Dành cho TẤT CẢ thành viên):**
