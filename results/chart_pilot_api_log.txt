@@ -1,0 +1,7 @@
+[2026-07-12 18:21:57] === START RUN === model=qwen3.6:latest project=Chart mode=pilot resume_count=0
+[2026-07-13 01:33:16] === START RUN === model=qwen3.6:latest project=Chart mode=pilot resume_count=258
+[2026-07-13 01:35:21] [EMPTY/INVALID] Chart-17-0259 raw="[REQUEST_ERROR: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)]"
+[2026-07-13 01:37:25] [EMPTY/INVALID] Chart-17-0260 raw="[REQUEST_ERROR: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)]"
+[2026-07-13 01:41:22] === START RUN === model=qwen3.6:latest project=Chart mode=pilot resume_count=260
+[2026-07-13 02:32:13] === START RUN === model=qwen3.6:latest project=Chart mode=pilot resume_count=623
+[2026-07-13 05:12:40] === END RUN [Chart] === total_processed=2381 skipped_resume=623 empty_invalid=0 (0.0%) elapsed_sec=9626.6 avg_sec_per_mutant=4.04
