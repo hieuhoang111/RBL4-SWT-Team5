@@ -1,0 +1,2 @@
+[2026-07-13 05:12:40] === START RUN === model=qwen3.6:latest project=Time mode=pilot resume_count=0
+[2026-07-13 06:22:20] === END RUN [Time] === total_processed=1031 skipped_resume=0 empty_invalid=0 (0.0%) elapsed_sec=4180.1 avg_sec_per_mutant=4.05
